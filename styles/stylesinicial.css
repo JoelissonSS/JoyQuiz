@@ -1,0 +1,61 @@
+* {
+    border: 0;
+    padding: 0px;
+}
+:root{
+    --cor-de-fundo: #CCA9DD;
+    --cor-padrao: #CBAEF5;
+    --cor-secundaria: #D7D3ED;
+    --cor-contraste: #EFAEF5;
+    --contraste: rgb(66, 33, 95);
+}
+@font-face {
+    font-family: 'joy';
+    src: url(../fonts/LexendDeca-VariableFont_wght.ttf);
+}
+body{
+    font-family: 'joy', serif;
+    background-color: #D7D3ED;
+    max-width: 700px;
+    padding: 5px;
+    margin: 5px auto;
+
+}
+header{
+    background-color: #CCA9DD;
+    text-align: center;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 0px 0px 3px 1px rgb(0 0 0 / 21%);
+}
+#botao{
+    text-align: center;
+}
+#comecar {
+    background-color: #8f55e0;
+    border-radius:28px;
+    border:2px solid var(--contraste);
+    display:inline-block;
+    cursor:pointer;
+    color:white;
+    font-family: joy, serif;
+    font-size: 24px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+    margin: 50px;
+}
+#comecar:hover {
+    background-color: #7345b5 ;
+    border: 3px solid var(--contraste);
+}
+footer {
+    position: sticky;
+    bottom:0;
+    text-align: center;
+    text-decoration: none;
+    margin: 1px;
+}
+.link{
+    text-decoration: none;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/quiz.css">
+    <title>Quiz</title>
+</head>
+<body onload="start()">
+    <header>
+        <h1 id="pergunta"></h1>
+    </header>
+    <div id="corporesp">
+        <div><button class='button' id="alt1" onclick="confirmar(perguntas[i].a1, 'alt1')"></button></div>
+        <div><button class='button' id="alt2" onclick="confirmar(perguntas[i].a2, 'alt2')"></button></div>
+        <div><button class='button' id="alt3" onclick="confirmar(perguntas[i].a3, 'alt3')"></button></div>
+        <div><button class='button' id="alt4" onclick="confirmar(perguntas[i].a4, 'alt4')"></button></div>
+    </div>
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+    <p id="pontuacao"></p>
+    <p><a href="quiz.html">quer jogar de novo?</a></p>
+    <p><a href="index.html">Voltar para tela inicial</a></p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
