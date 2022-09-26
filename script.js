@@ -56,10 +56,10 @@ function start(){
 }
 function confirmar(c, e){
     if (c === perguntas[i].ans){
-        document.getElementById(e).style.backgroundColor = "#45E82C"
+        document.getElementById(e).style.backgroundColor = "#07d000"
         pontos =+ pontos + 1
     } else {
-        document.getElementById(e).style.backgroundColor = "#FF1300"
+        document.getElementById(e).style.backgroundColor = "#ff0000"
     }
     setTimeout(function(){
         mudarperg()
