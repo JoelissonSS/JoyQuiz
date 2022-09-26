@@ -47,7 +47,8 @@ header{
 }
 #comecar:hover {
     background-color: #7345b5 ;
-    border: 3px solid var(--contraste);
+    transform: scale(0.98);
+    transition: all 0.1s;
 }
 footer {
     position: sticky;
