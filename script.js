@@ -36,22 +36,22 @@ function setPergs(){
     }
     return quizAtual
 }
-function setQuiz(i){
-    let p = document.querySelector('#pergunta')
-    let al1 = document.querySelector('#alt1')
-    let al2 = document.querySelector('#alt2')
-    let al3 = document.querySelector('#alt3')
-    let al4 = document.querySelector('#alt4')
-    
-    p.innerHTML = (perguntas[i].ask)
-    al1.innerHTML = (perguntas[i].a1)
-    al2.innerHTML = (perguntas[i].a2)
-    al3.innerHTML = (perguntas[i].a3)
-    al4.innerHTML = (perguntas[i].a4)
+function pickElements(e){
+    ind = document.querySelector(e)
+    a = ind.innerHTML
+    return ind
+} 
+function setQuiz(){
+    pickElements('#pergunta').innerHTML = (perguntas[i].ask)
+    pickElements('#alt1').innerHTML = (perguntas[i].a1)
+    pickElements('#alt2').innerHTML = (perguntas[i].a2)
+    pickElements('#alt3').innerHTML = (perguntas[i].a3)
+    pickElements('#alt4').innerHTML = (perguntas[i].a4)
 }
+
 function start(){
     setQuiz(i)
-    
+    return i
 }
 function confirmar(c, e){
     if (c === perguntas[i].ans){
