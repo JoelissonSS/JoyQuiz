@@ -38,7 +38,6 @@ function setPergs(){
 }
 function pickElements(e){
     ind = document.querySelector(e)
-    a = ind.innerHTML
     return ind
 } 
 function setQuiz(){
@@ -48,10 +47,8 @@ function setQuiz(){
     pickElements('#alt3').innerHTML = (perguntas[i].a3)
     pickElements('#alt4').innerHTML = (perguntas[i].a4)
 }
-
 function start(){
     setQuiz(i)
-    return i
 }
 function confirmar(c, e){
     if (c === perguntas[i].ans){
@@ -61,15 +58,12 @@ function confirmar(c, e){
         document.getElementById(e).style.backgroundColor = "#ff0000"
     }
     setTimeout(function(){
-        mudarperg()
+        i = i + 1
+        i > 4? finalizar():setQuiz(i)
     }, 500)
     setTimeout(function(){
         document.getElementById(e).style.backgroundColor = ' rgb(143, 85, 224)'
     },500)
-}
-function mudarperg(){
-    i = i + 1
-    i > 4? finalizar():setQuiz(i)
 }
 function finalizar(){
     pontuacao(pontos)
@@ -85,7 +79,7 @@ function pontuacao(p){
     } else if (p === 3){
         poo.innerText = p + ' acertos, está na media!'
     }
-    else if (p <= 2){
+    else{
         poo.innerHTML = p + ' acertos, na próxima você consegue mais!'
     }
 }
